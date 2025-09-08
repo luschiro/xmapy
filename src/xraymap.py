@@ -7,8 +7,7 @@ import matplotlib.pyplot as plt
 
 from src.utils import get_dirs # function that reads directories
 
-class XrayMap: 
-
+class XrayMap:
   """
   XrayMap class that read all x-ray maps from a specific dir. 
   It returns a list for numpy arrays, scaled to 255 and ready from diplay with plt.imgshow().
@@ -17,13 +16,12 @@ class XrayMap:
   and are located on DATA_DIR.
   """
 
-
   # constructor
   def __init__(self, element):
     self.element = element
-    self.xray_data = self.load_data(element)
+    self.load_data(element)
     self.xray_data_scaled = self.data.to_numpy().astype(np.float32) / 255.0
-    # self.dimensions = self.xray_data.shape
+    self.dimensions = self.data.shape
 
   def load_data(self, element):
     try:
