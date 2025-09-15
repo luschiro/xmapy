@@ -23,6 +23,9 @@ class XrayMap:
     self.xray_data_scaled = self.data.to_numpy().astype(np.float32) / 255.0
     self.dimensions = self.data.shape
 
+  def __init__(self, path):
+    self
+  
   def load_data(self, element):
     try:
       # print('{a}.csv'.format(a=el))
