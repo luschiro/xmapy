@@ -23,13 +23,14 @@ class XrayMap:
     self.xray_data_scaled = self.data.to_numpy().astype(np.float32) / 255.0
     self.dimensions = self.data.shape
 
-  def __init__(self, path):
-    self
   
   def load_data(self, element):
     try:
       # print('{a}.csv'.format(a=el))
-      self.data = pd.read_csv(os.path.join(get_dirs()["DATA_DIR"],'{element}.csv'.format(element=element)),dtype="Int64",header=None)
+      self.data = pd.read_csv(os.path.join(get_dirs()["DATA_DIR"],
+                                           '{element}.csv'.format(element=element)),
+                                           dtype="Int64",
+                                           header=None)
       print('{a}.csv found!'.format(a=element))
 
     except:
@@ -39,9 +40,8 @@ class XrayMap:
     """
     function that plots the map
     """
+    plt.title("X-ray map: " + self.element)
     plt.imshow(self.xray_data_scaled)
-    print(self.element)
-    plt.title = self.element
     plt.show()
 
   pass
