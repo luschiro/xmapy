@@ -33,7 +33,9 @@ class XrayMap:
       print("error loading map")
 
   def show_map(self):
-    """function that plots the map"""
+    """
+    function that plots the map
+    """
     plt.imshow(self.xray_data_scaled)
     print(self.element)
     plt.title = self.element
