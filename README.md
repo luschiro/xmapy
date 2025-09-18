@@ -45,17 +45,24 @@ Existem alguns softwares disponíveis que atualmente já resolvem parte do probl
 ### 1. Carregamento
 
 ### 2. Resoluções
-  #### resizing - upscale
+  
+#### upscale
   * `NEAREST`
   * `LINEAR`
   * `CUBIC`
   * `LANCZOS4`
-  #### resizing - downscale
+#### downscale
   * `INTERAREA`
-### 3. Coordenadas
 
-### 4. Exploração
+### 3. Coordinates
 
-### 5. Modelagem
+  * Align images using openCV?
+  * When putting together Spot and Maps, a correlation approach similar to XMapTools might work.
+    * an adjustable correlation matrix where color ramp indicates the correlation between spot and map
+    * the matrix map shows which pixel has higher correlation 
+
+### 4. EDA
+
+### 5. Modelling
 
 ### 6. Outputs
